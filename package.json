@@ -1,12 +1,14 @@
 {
   "name": "cube",
-  "productName":"Cube",
+  "productName": "Cube",
   "version": "0.0.1",
   "description": "Cube Player Init",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose"
+    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "jainmukul",
   "license": "MIT",
@@ -18,11 +20,13 @@
     "classnames": "^2.2.3",
     "electron-prebuilt": "^0.36.0",
     "electron-reload": "^0.2.0",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "react": "^0.14.8",
     "react-autocomplete": "^1.0.0-rc2",
     "react-dom": "^0.14.7",
     "react-sound": "^0.4.0",
-    "soundmanager2": "^2.97.20150601-a"
-  }
+    "soundmanager2": "^2.97.20150601-a",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
